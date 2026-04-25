@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { IconMapPin, StarsRow, IconTopChoice, FeatureIcon } from "./Icons";
 
 export function HotelCard({
@@ -92,9 +93,9 @@ export function HotelCard({
                 <span className="text-[#424753] text-[12px]">/night</span>
               </div>
             </div>
-            <a className="bg-[#B61B4A] hover:bg-rose-800 transition-colors cursor-pointer flex items-center justify-center px-6 py-2 rounded-lg">
+            <Link href="/room/1" className="bg-[#B61B4A] hover:bg-rose-800 transition-colors cursor-pointer flex items-center justify-center px-6 py-2 rounded-lg">
               <span className="font-normal text-white text-[16px] leading-6">Book Now</span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
