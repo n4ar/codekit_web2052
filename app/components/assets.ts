@@ -1,0 +1,14 @@
+export const imgHeroBg = "https://www.figma.com/api/mcp/asset/4a44d599-8df1-478c-84ad-1404cb6cad6e";
+export const imgBangkok = "https://www.figma.com/api/mcp/asset/e8280fcf-e136-4d1c-b105-fc1608b2b0e0";
+export const imgTokyo   = "https://www.figma.com/api/mcp/asset/cebac7bc-c11e-48ad-87ea-45b5b4288374";
+export const imgParis   = "https://www.figma.com/api/mcp/asset/7d3ffefb-1595-462e-a9dc-1173d6387d8c";
+export const imgLondon  = "https://www.figma.com/api/mcp/asset/b30d02ed-5c78-40f6-9bad-0d5faeb231a1";
+export const imgSummer  = "https://www.figma.com/api/mcp/asset/f3802388-fccb-46c0-ae93-439234f99de4";
+export const imgGlobe   = "https://www.figma.com/api/mcp/asset/0e9bf368-3160-4064-8c14-b04be9a2804b";
+export const imgMail    = "https://www.figma.com/api/mcp/asset/41f10905-fc47-4d2a-a05e-4002b6c0f923";
+export const imgIconLocation = "https://www.figma.com/api/mcp/asset/ed5503df-877d-4c48-b243-2d5f476ffe61";
+export const imgIconCalendar = "https://www.figma.com/api/mcp/asset/5063c826-6bc4-4aa4-8d94-39702c72cdd2";
+export const imgIconSearch   = "https://www.figma.com/api/mcp/asset/5923d268-a03a-4c65-b2e1-31ef94b57c3e";
+export const imgIconShield   = "https://www.figma.com/api/mcp/asset/f7f47013-7740-4510-bd37-9b20046c7878";
+export const imgIconPhone    = "https://www.figma.com/api/mcp/asset/16e28629-ac26-4a01-acaf-4d308937db4f";
+export const imgIconCalFlex  = "https://www.figma.com/api/mcp/asset/af867eae-9fbd-43a3-8cad-92d4b50939d1";
