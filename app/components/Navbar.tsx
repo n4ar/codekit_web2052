@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function Navbar() {
   return (
     <nav
@@ -11,12 +13,14 @@ export function Navbar() {
       >
         {/* Left: logo + nav */}
         <div className="flex items-center gap-4 md:gap-8">
-          <div
-            className="text-blue-600 font-extrabold text-xl md:text-2xl tracking-tighter flex items-center"
-            style={{ fontFamily: "var(--font-plus-jakarta-sans)" }}
-          >
-            T-Goda
-          </div>
+          <Link href="/" className="no-underline">
+            <div
+              className="text-blue-600 font-extrabold text-xl md:text-2xl tracking-tighter flex items-center hover:opacity-80 transition-opacity cursor-pointer"
+              style={{ fontFamily: "var(--font-plus-jakarta-sans)" }}
+            >
+              T-Goda
+            </div>
+          </Link>
           <nav className="hidden md:flex items-center gap-6">
             <a
               href="#"

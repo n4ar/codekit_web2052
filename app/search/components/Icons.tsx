@@ -101,3 +101,122 @@ export function StarsRow({ count, total = 5, size = 14 }: { count: number; total
     </div>
   );
 }
+
+export function IconTopChoice() {
+  return (
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+      <path d="M7 1l1.545 3.13 3.455.503-2.5 2.437.59 3.44L7 8.885l-3.09 1.625.59-3.44L2 4.633l3.455-.503L7 1z" fill="#005CBD"/>
+    </svg>
+  );
+}
+
+export function IconWifi() {
+  return (
+    <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
+      <path d="M7 8.5a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" fill="#424753"/>
+      <path d="M4.05 6.55A4.15 4.15 0 0 1 7 5.5c1.14 0 2.18.46 2.95 1.21" stroke="#424753" strokeWidth="1.2" strokeLinecap="round"/>
+      <path d="M1.5 4.05A6.93 6.93 0 0 1 7 1.75c2.13 0 4.04.96 5.33 2.48" stroke="#424753" strokeWidth="1.2" strokeLinecap="round"/>
+    </svg>
+  );
+}
+
+export function IconPool() {
+  return (
+    <svg width="14" height="12" viewBox="0 0 14 12" fill="none">
+      <path d="M1 9c1 0 1.5-.75 2.5-.75S5 9 6 9s1.5-.75 2.5-.75S10 9 11 9s1.5-.75 2.5-.75" stroke="#424753" strokeWidth="1.2" strokeLinecap="round"/>
+      <path d="M1 11.5c1 0 1.5-.75 2.5-.75S5 11.5 6 11.5s1.5-.75 2.5-.75 1.5.75 2.5.75 1.5-.75 2.5-.75" stroke="#424753" strokeWidth="1.2" strokeLinecap="round"/>
+      <circle cx="9.5" cy="2.5" r="1.25" stroke="#424753" strokeWidth="1.2"/>
+      <path d="M5.5 7V5l2.5-2 2 1.5" stroke="#424753" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>
+  );
+}
+
+export function IconSpa() {
+  return (
+    <svg width="12" height="14" viewBox="0 0 12 14" fill="none">
+      <path d="M6 13C6 13 1 9.5 1 5.5a5 5 0 0 1 5-5 5 5 0 0 1 5 5C11 9.5 6 13 6 13z" stroke="#424753" strokeWidth="1.2"/>
+      <path d="M6 13V7M6 7C6 7 3.5 5.5 3 3.5M6 7c0 0 2.5-1.5 3-3.5" stroke="#424753" strokeWidth="1.2" strokeLinecap="round"/>
+    </svg>
+  );
+}
+
+export function IconBreakfast() {
+  return (
+    <svg width="12" height="14" viewBox="0 0 12 14" fill="none">
+      <path d="M2 5h8v5a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V5z" stroke="#424753" strokeWidth="1.2"/>
+      <path d="M10 6c.8 0 1.5.67 1.5 1.5S10.8 9 10 9" stroke="#424753" strokeWidth="1.2" strokeLinecap="round"/>
+      <path d="M4 1v2M6 1v2M8 1v2" stroke="#424753" strokeWidth="1.2" strokeLinecap="round"/>
+    </svg>
+  );
+}
+
+export function IconFitness() {
+  return (
+    <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
+      <rect x="0.75" y="3" width="2" height="4" rx="1" stroke="#424753" strokeWidth="1.2"/>
+      <rect x="11.25" y="3" width="2" height="4" rx="1" stroke="#424753" strokeWidth="1.2"/>
+      <rect x="3.25" y="1.5" width="1.5" height="7" rx="0.75" stroke="#424753" strokeWidth="1.2"/>
+      <rect x="9.25" y="1.5" width="1.5" height="7" rx="0.75" stroke="#424753" strokeWidth="1.2"/>
+      <line x1="4.75" y1="5" x2="9.25" y2="5" stroke="#424753" strokeWidth="1.2" strokeLinecap="round"/>
+    </svg>
+  );
+}
+
+export function IconYoga() {
+  return (
+    <svg width="12" height="14" viewBox="0 0 12 14" fill="none">
+      <circle cx="6" cy="2" r="1.25" stroke="#424753" strokeWidth="1.2"/>
+      <path d="M6 4v4" stroke="#424753" strokeWidth="1.2" strokeLinecap="round"/>
+      <path d="M2 6l4 1 4-1" stroke="#424753" strokeWidth="1.2" strokeLinecap="round"/>
+      <path d="M4 8l-1.5 4M8 8l1.5 4" stroke="#424753" strokeWidth="1.2" strokeLinecap="round"/>
+    </svg>
+  );
+}
+
+export function IconAirportShuttle() {
+  return (
+    <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
+      <rect x="1" y="2" width="9" height="5.5" rx="1" stroke="#424753" strokeWidth="1.2"/>
+      <path d="M10 4h2l1 2v1.5h-3V4z" stroke="#424753" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
+      <circle cx="3.5" cy="8.5" r="1" fill="#424753"/>
+      <circle cx="8.5" cy="8.5" r="1" fill="#424753"/>
+      <circle cx="11.5" cy="8.5" r="1" fill="#424753"/>
+    </svg>
+  );
+}
+
+export function IconGym() {
+  return (
+    <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
+      <rect x="0.75" y="3" width="2" height="4" rx="1" stroke="#424753" strokeWidth="1.2"/>
+      <rect x="11.25" y="3" width="2" height="4" rx="1" stroke="#424753" strokeWidth="1.2"/>
+      <rect x="3.25" y="1.5" width="1.5" height="7" rx="0.75" stroke="#424753" strokeWidth="1.2"/>
+      <rect x="9.25" y="1.5" width="1.5" height="7" rx="0.75" stroke="#424753" strokeWidth="1.2"/>
+      <line x1="4.75" y1="5" x2="9.25" y2="5" stroke="#424753" strokeWidth="1.2" strokeLinecap="round"/>
+    </svg>
+  );
+}
+
+export function IconPrivateBeach() {
+  return (
+    <svg width="14" height="12" viewBox="0 0 14 12" fill="none">
+      <path d="M1 9.5c2-2 4-2 6 0s4 2 6 0" stroke="#424753" strokeWidth="1.2" strokeLinecap="round"/>
+      <path d="M7 8V3" stroke="#424753" strokeWidth="1.2" strokeLinecap="round"/>
+      <path d="M7 3c0 0-3-1-4-3" stroke="#424753" strokeWidth="1.2" strokeLinecap="round"/>
+      <path d="M7 3c0 0 3-1 4-3" stroke="#424753" strokeWidth="1.2" strokeLinecap="round"/>
+    </svg>
+  );
+}
+
+export function FeatureIcon({ name }: { name: string }) {
+  const lower = name.toLowerCase();
+  if (lower.includes("wi-fi") || lower.includes("wifi")) return <IconWifi />;
+  if (lower.includes("pool")) return <IconPool />;
+  if (lower.includes("spa")) return <IconSpa />;
+  if (lower.includes("breakfast")) return <IconBreakfast />;
+  if (lower.includes("fitness") || lower.includes("gym")) return <IconGym />;
+  if (lower.includes("yoga")) return <IconYoga />;
+  if (lower.includes("airport") || lower.includes("shuttle")) return <IconAirportShuttle />;
+  if (lower.includes("beach")) return <IconPrivateBeach />;
+  return null;
+}

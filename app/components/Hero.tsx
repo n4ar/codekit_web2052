@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { imgHeroBg, imgIconLocation, imgIconCalendar, imgIconSearch } from "./assets";
 
 export function Hero() {
@@ -69,12 +70,12 @@ export function Hero() {
             </div>
 
             {/* Search Button */}
-            <button className="flex items-center justify-center w-full md:w-auto flex-shrink-0 bg-[#005CBD] hover:bg-blue-800 transition-colors rounded-lg border-none cursor-pointer py-3 px-8 gap-2">
+            <Link href="/search" className="flex items-center justify-center w-full md:w-auto flex-shrink-0 bg-[#005CBD] hover:bg-blue-800 transition-colors rounded-lg cursor-pointer py-3 px-8 gap-2">
               <img alt="Search" src={imgIconSearch} className="w-[18px] h-[18px]" />
               <span className="font-bold text-lg leading-7 text-white">
                 Search
               </span>
-            </button>
+            </Link>
           </div>
         </div>
       </section>

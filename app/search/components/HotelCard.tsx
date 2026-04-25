@@ -1,4 +1,4 @@
-import { IconMapPin, StarsRow } from "./Icons";
+import { IconMapPin, StarsRow, IconTopChoice, FeatureIcon } from "./Icons";
 
 export function HotelCard({
   image,
@@ -12,6 +12,7 @@ export function HotelCard({
   price,
   stars,
   badge,
+  note,
 }: {
   image: string;
   name: string;
@@ -24,6 +25,7 @@ export function HotelCard({
   price: string;
   stars: number;
   badge?: string;
+  note?: string;
 }) {
   return (
     <div className="bg-white border border-slate-200 overflow-hidden flex flex-col md:flex-row md:h-[256px] rounded-xl shadow-sm hover:shadow-md transition-shadow w-full">
@@ -34,8 +36,9 @@ export function HotelCard({
             <img alt={name} className="absolute w-full h-full object-cover" src={image} />
           </div>
           {badge && (
-            <div className="absolute top-3 left-3 bg-[#005CBD] px-3 py-1 rounded-lg">
-              <span className="font-bold text-[11px] text-white">{badge}</span>
+            <div className="absolute top-4 left-4 backdrop-blur-[2px] bg-[rgba(255,255,255,0.9)] drop-shadow-[0px_1px_1px_rgba(0,0,0,0.05)] flex gap-1 items-center px-3 py-[3px] rounded-full">
+              <IconTopChoice />
+              <span className="font-bold text-[#005CBD] text-[12px] leading-[16.8px]">{badge}</span>
             </div>
           )}
         </div>
@@ -58,30 +61,26 @@ export function HotelCard({
             </div>
             
             {/* Rating badge */}
-            <div className="flex sm:flex-col items-center sm:items-end justify-between sm:justify-start gap-2 sm:gap-1 w-full sm:w-auto shrink-0">
-              <div className="flex gap-2 items-center">
-                <span className="text-[#424753] text-[12px] leading-4 text-right hidden sm:block">{ratingLabel}</span>
-                <div className="bg-[#005CBD] w-9 h-9 rounded-lg flex items-center justify-center">
-                  <span className="font-bold text-white text-[14px]">{rating}</span>
-                </div>
-              </div>
-              <span className="text-[#424753] text-[12px] leading-4 font-medium sm:font-normal">{reviews}</span>
+            <div className="bg-[rgba(0,92,189,0.1)] px-3 py-[6px] rounded-[8px] flex flex-col items-end shrink-0">
+              <span className="font-bold text-[#005CBD] text-[14px] leading-[20px] text-right whitespace-nowrap">{rating} {ratingLabel}</span>
+              <span className="text-[#424753] text-[10px] leading-[15px] text-right whitespace-nowrap">{reviews}</span>
             </div>
           </div>
           
           {/* Feature tags */}
           <div className="flex flex-wrap gap-2">
             {features.map((f) => (
-              <span key={f} className="bg-[#F0F4FF] text-[#005CBD] font-medium text-[12px] px-3 py-1 rounded-full whitespace-nowrap">
-                {f}
-              </span>
+              <div key={f} className="bg-[#ecedf6] flex items-center gap-[6px] pl-2 pr-[10px] py-[4px] rounded-[4px]">
+                <FeatureIcon name={f} />
+                <span className="text-[#191c22] text-[11px] leading-[16.5px] whitespace-nowrap">{f}</span>
+              </div>
             ))}
           </div>
         </div>
         
         {/* Bottom: price + book */}
         <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 sm:gap-0 mt-4 sm:mt-0">
-          <span className="text-[#424753] text-[12px] font-medium sm:font-normal">Free cancellation available</span>
+          <span className="text-[#424753] text-[12px] font-medium sm:font-normal">{note ?? "Free cancellation available"}</span>
           
           <div className="flex flex-row sm:flex-col items-center sm:items-end justify-between w-full sm:w-auto gap-1">
             <div className="flex flex-col items-start sm:items-end">
@@ -89,7 +88,7 @@ export function HotelCard({
                 <span className="text-[#424753] text-[12px] line-through">{originalPrice}</span>
               )}
               <div className="flex items-baseline gap-1">
-                <span className="font-semibold text-[#191C22] text-xl sm:text-[24px] leading-tight sm:leading-[31.2px]">{price}</span>
+                <span className="font-semibold text-[#B61B4A] text-xl sm:text-[24px] leading-tight sm:leading-[31.2px]">{price}</span>
                 <span className="text-[#424753] text-[12px]">/night</span>
               </div>
             </div>

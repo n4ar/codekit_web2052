@@ -1,4 +1,21 @@
-import { imgGlobe, imgSummer } from "./assets";
+import { imgSummer } from "./assets";
+
+const HeartTagIcon = () => (
+  // A custom SVG for a price tag combined with a heart cutout
+  <svg 
+    viewBox="0 0 24 24" 
+    fill="none" 
+    xmlns="http://www.w3.org/2000/svg" 
+    className="w-full h-full text-black opacity-10"
+  >
+    <path 
+      fillRule="evenodd" 
+      clipRule="evenodd" 
+      d="M12.981 1.764a2.5 2.5 0 0 0-1.768-.732H4A2.5 2.5 0 0 0 1.5 3.532v7.213c0 .663.264 1.3.732 1.768l11.142 11.142a2.5 2.5 0 0 0 3.536 0l7.213-7.213a2.5 2.5 0 0 0 0-3.536L12.981 1.764ZM7 8.532a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3ZM12 17.032l-3.5-3.5a2.121 2.121 0 0 1 3-3l.5.5.5-.5a2.121 2.121 0 0 1 3 3l-3.5 3.5Z" 
+      fill="currentColor"
+    />
+  </svg>
+);
 
 export function PromoBanner() {
   return (
@@ -7,9 +24,11 @@ export function PromoBanner() {
         className="relative overflow-hidden flex flex-col md:flex-row items-center justify-between rounded-3xl py-10 px-6 md:px-12 gap-10 md:gap-4 bg-[#B61B4A]"
         style={{ isolation: "isolate" }}
       >
-        {/* Decorative bg globe icon */}
-        <div className="absolute inset-0 flex items-center justify-center opacity-20 pointer-events-none">
-          <img alt="globe" src={imgGlobe} className="w-[200px] md:w-[250px] object-contain" />
+        {/* Decorative bg globe icon replaced with Heart Tag */}
+        <div className="absolute left-[45%] top-1/2 -translate-y-1/2 flex items-center justify-center opacity-70 pointer-events-none z-[-1] hidden sm:flex">
+          <div className="w-[300px] h-[300px] md:w-[420px] md:h-[420px] transform rotate-[15deg]">
+            <HeartTagIcon />
+          </div>
         </div>
 
         {/* Left content */}
