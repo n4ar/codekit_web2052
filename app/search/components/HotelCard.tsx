@@ -31,7 +31,7 @@ export function HotelCard({
   return (
     <div className="bg-white border border-slate-200 overflow-hidden flex flex-col md:flex-row md:h-[256px] rounded-xl shadow-sm hover:shadow-md transition-shadow w-full">
       {/* Image */}
-      <a className="cursor-pointer relative shrink-0 w-full md:w-[320px] h-[200px] md:h-full z-[2]">
+      <Link href="/room/1" className="cursor-pointer relative shrink-0 w-full md:w-[320px] h-[200px] md:h-full z-[2]">
         <div className="relative flex-1 w-full h-full">
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <img alt={name} className="absolute w-full h-full object-cover" src={image} />
@@ -43,7 +43,7 @@ export function HotelCard({
             </div>
           )}
         </div>
-      </a>
+      </Link>
       
       {/* Content */}
       <div className="flex-1 w-full flex flex-col justify-between p-4 md:p-6 z-[1]">

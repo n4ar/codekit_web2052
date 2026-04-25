@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { IconMapPin, StarsRow } from "./Icons";
 
 export function FlashDealCard({
@@ -20,7 +21,7 @@ export function FlashDealCard({
   return (
     <div className="flex flex-col sm:flex-row min-h-[192px] items-stretch sm:items-start w-full">
       {/* Image side */}
-      <a className="cursor-pointer relative shrink-0 w-full sm:w-[256px] h-[180px] sm:h-[192px] overflow-hidden flex flex-col items-start justify-center z-[2]">
+      <Link href="/room/1" className="cursor-pointer relative shrink-0 w-full sm:w-[256px] h-[180px] sm:h-[192px] overflow-hidden flex flex-col items-start justify-center z-[2]">
         <div className="relative flex-1 w-full h-full">
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <img alt={name} className="absolute h-full w-full object-cover" src={image} />
@@ -30,7 +31,7 @@ export function FlashDealCard({
         <div className="absolute top-3 left-3 bg-[#B61B4A] px-3 py-1 rounded-lg shadow-md">
           <span className="font-extrabold text-[12px] text-white leading-4">{discount}</span>
         </div>
-      </a>
+      </Link>
       
       {/* Info side */}
       <div className="flex-1 w-full p-4 sm:p-5 flex flex-col justify-center z-[1]">
@@ -54,9 +55,9 @@ export function FlashDealCard({
                 <span className="text-[#424753] text-[10px] leading-[15px]">/night</span>
               </div>
             </div>
-            <a className="bg-[#B61B4A] cursor-pointer drop-shadow-sm flex items-center justify-center px-6 py-2 sm:px-4 sm:py-1.5 rounded-lg w-full sm:w-auto mt-auto sm:mt-0">
+            <Link href="/room/1" className="bg-[#B61B4A] cursor-pointer drop-shadow-sm flex items-center justify-center px-6 py-2 sm:px-4 sm:py-1.5 rounded-lg w-full sm:w-auto mt-auto sm:mt-0">
               <span className="font-bold text-sm sm:text-xs text-white leading-5 sm:leading-4">Claim</span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
