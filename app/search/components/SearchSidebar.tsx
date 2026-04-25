@@ -44,15 +44,19 @@ export function SearchSidebar() {
           {/* Price Range */}
           <div className="flex flex-col gap-3 w-full">
             <span className="font-semibold text-slate-900 text-sm">Price Range</span>
-            <div className="flex flex-col gap-4 px-1">
+            <div className="flex flex-col gap-2 px-1">
               <div className="flex items-center justify-between">
                 <span className="font-medium text-slate-500 text-xs">$0</span>
                 <span className="font-medium text-slate-500 text-xs">$1000+</span>
               </div>
-              <div className="bg-slate-200 h-1.5 rounded-lg w-full relative">
-                <div className="absolute left-0 h-full w-2/3 bg-[#005CBD] rounded-lg" />
-                <div className="absolute left-[66%] top-1/2 -translate-y-1/2 w-4 h-4 bg-white border-2 border-[#005CBD] rounded-full shadow" />
-              </div>
+              <input
+                type="range"
+                min={0}
+                max={1000}
+                defaultValue={650}
+                className="w-full h-1.5 rounded-lg appearance-none cursor-pointer"
+                style={{ accentColor: "#94a3b8", background: "#e2e8f0" }}
+              />
             </div>
           </div>
 
