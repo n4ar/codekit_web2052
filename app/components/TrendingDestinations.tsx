@@ -1,4 +1,5 @@
 import { imgBangkok, imgTokyo, imgParis, imgLondon } from "./assets";
+import Link from "next/link";
 
 const DESTINATIONS = [
   {
@@ -44,24 +45,28 @@ export function TrendingDestinations() {
             Handpicked favorites for your next adventure
           </p>
         </div>
-        <a
-          href="#"
+        <Link
+          href="/search"
           className="font-bold text-sm md:text-[16px] leading-5 md:leading-[24px] text-[#005CBD] no-underline whitespace-nowrap"
         >
           View all
-        </a>
+        </Link>
       </div>
 
       {/* Cards grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {DESTINATIONS.map((d) => (
-          <div key={d.city} className="flex flex-col h-[436px]">
+          <Link
+            key={d.city}
+            href={`/search`}
+            className="flex flex-col h-[436px] group no-underline transition-transform hover:-translate-y-1 duration-300"
+          >
             {/* Image */}
-            <div className="relative overflow-hidden h-[376px] rounded-2xl flex-shrink-0 bg-slate-100">
+            <div className="relative overflow-hidden h-[376px] rounded-2xl flex-shrink-0 bg-slate-100 shadow-sm group-hover:shadow-md transition-shadow">
               <img
                 alt={d.city}
                 src={d.image}
-                className="absolute w-full h-full object-cover"
+                className="absolute w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
               {d.badge && (
                 <div className="absolute left-4 bottom-3 bg-white/90 rounded-full px-3 py-1 backdrop-blur-sm shadow-sm">
@@ -74,7 +79,7 @@ export function TrendingDestinations() {
 
             {/* Info */}
             <div className="pt-3 flex-1 flex flex-col justify-end">
-              <p className="font-bold text-lg md:text-xl leading-snug md:leading-7 text-[#191C22] m-0">
+              <p className="font-bold text-lg md:text-xl leading-snug md:leading-7 text-[#191C22] m-0 group-hover:text-[#005CBD] transition-colors">
                 {d.city}, {d.country}
               </p>
               <p className="font-normal text-sm leading-5 text-[#424753] m-0">
@@ -82,7 +87,7 @@ export function TrendingDestinations() {
                 <span className="font-bold text-[#005CBD]">{d.price}</span>
               </p>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </section>
