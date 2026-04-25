@@ -1,4 +1,5 @@
-import { IconFilter, Checkbox, StarsRow, IconMapPinBlue } from "./Icons";
+import { useState } from "react";
+import { IconFilter, Checkbox, StarsRow, IconMapPinBlue, IconChevronDown } from "./Icons";
 import { imgMapBg } from "./assets";
 
 const propertyTypes = ["Hotels", "Resorts", "Apartments", "Villas"];
@@ -8,12 +9,30 @@ const neighborhoods = ["Patong", "Karon", "Kata", "Kamala"];
 const bedTypes = ["Single", "Double", "King"];
 
 export function SearchSidebar() {
+  const [showFilters, setShowFilters] = useState(false);
+
   return (
-    <aside className="flex flex-col gap-6 lg:gap-8 shrink-0 w-full lg:w-[256px]">
+    <aside className="flex flex-col gap-4 lg:gap-8 shrink-0 w-full lg:w-[256px]">
+      
+      {/* Mobile Toggle Button */}
+      <button 
+        className="lg:hidden flex items-center justify-between bg-white border border-slate-300 hover:bg-slate-50 active:bg-slate-100 rounded-xl p-4 shadow-sm w-full font-semibold text-slate-900 cursor-pointer outline-none transition-colors"
+        onClick={() => setShowFilters(!showFilters)}
+      >
+        <div className="flex items-center gap-2">
+           <IconFilter />
+           <span>{showFilters ? "Hide Filters" : "Show Filters"}</span>
+        </div>
+        <div className={`transform transition-transform duration-300 ${showFilters ? 'rotate-180' : ''}`}>
+           <IconChevronDown />
+        </div>
+      </button>
+
       {/* Filters panel */}
-      <div className="bg-white border border-slate-200 shadow-sm flex flex-col gap-4 p-4 lg:pb-8 lg:pt-4 rounded-xl w-full">
-        {/* Heading */}
-        <div className="flex gap-2 items-center w-full">
+      <div className={`bg-white border border-slate-200 shadow-sm flex-col gap-4 p-4 lg:pb-8 lg:pt-4 rounded-xl w-full transition-all duration-300 ${showFilters ? 'flex' : 'hidden lg:flex'}`}>
+        
+        {/* Heading (Desktop only) */}
+        <div className="hidden lg:flex gap-2 items-center w-full">
           <div className="w-[18px] h-[12px] flex items-center justify-center">
             <IconFilter />
           </div>
@@ -21,7 +40,7 @@ export function SearchSidebar() {
         </div>
 
         {/* Filters Grid for Tablet/Mobile, Stacked for Desktop */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6 mt-2 lg:mt-0">
           {/* Price Range */}
           <div className="flex flex-col gap-3 w-full">
             <span className="font-semibold text-slate-900 text-sm">Price Range</span>
@@ -120,7 +139,7 @@ export function SearchSidebar() {
       </div>
 
       {/* Map CTA - Hidden on Mobile naturally or just shown at bottom */}
-      <div className="relative bg-slate-100 h-[160px] overflow-hidden rounded-xl shadow-sm w-full block sm:hidden lg:block">
+      <div className="relative bg-slate-100 h-[160px] overflow-hidden rounded-xl shadow-sm w-full hidden lg:block">
         <div className="absolute inset-0 pointer-events-none">
           <img alt="Map Background" className="w-full h-full object-cover opacity-80" src={imgMapBg} />
         </div>
@@ -131,6 +150,7 @@ export function SearchSidebar() {
           </button>
         </div>
       </div>
+      
     </aside>
   );
 }
